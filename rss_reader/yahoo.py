@@ -20,7 +20,7 @@ class YahooObj:
         post_url_list.append(post_url1_1)
 
         post_date1_1 = post_url1.find("p", class_="date").get_text()
-        print(post_date1_1)
+        #print(post_date1_1)
         post_date_list.append(post_date1_1)
 
         post_urls2 = soup.find_all("div", {'class':'panel-vertical'})
@@ -32,8 +32,8 @@ class YahooObj:
             post_date_list.append(post_date2_2)
             #print(post_url2)
 
-        print(post_url_list)   #type--> list
-        print(post_date_list)
+        #print(post_url_list)   #type--> list
+        #print(post_date_list)
         #print(str(post_url))
         #print(post_titles)
         i = 0
@@ -44,7 +44,7 @@ class YahooObj:
             post_title_list.append(post_title)
             #print(post_title)
             i += 1
-        print(post_title_list)
+        #print(post_title_list)
 
         # db
         media_title = 'yahoo'
