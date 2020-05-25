@@ -19,7 +19,7 @@ uber_url = 'https://eng.uber.com/feed/'
 spotify_url = 'https://labs.spotify.com/feed/'
 
 #xml_urls =[google_url,dena_url,merukari_url,smatrcamp_url,salesforce_url,asana_url,insta_url,indeed_url,dropbox_url,uber_url,spotify_url]
-xml_urls =[google_url,dena_url,merukari_url]
+xml_urls =[google_url,dena_url,merukari_url,sakura_url]
 
 xml_loop_counter = 0
 while True:
@@ -36,7 +36,7 @@ while True:
                     regex = re.compile(r'://.+?.com')
                     get_text = regex.findall(x)
                 elif '.ad' in x:
-                    regex = re.compile(r'://.+? .ad')
+                    regex = re.compile(r'://.+?.ad')
                     get_text = regex.findall(x)
                 elif '.co' in x:
                     regex = re.compile(r'://.+?.co')
@@ -49,7 +49,10 @@ while True:
                 print(media_title)
                 post_title = feed_url['entries'][loop_count]['title']
                 post_url = feed_url['entries'][loop_count]['link']
-                post_date = feed_url['entries'][loop_count]['published']
+                if 'published' in feed_url['entries'][loop_count].keys():
+                    post_date = feed_url['entries'][loop_count]['published']
+                elif 'updated' in feed_url['entries'][loop_count].keys():
+                    post_date = feed_url['entries'][loop_count]['updated']
 
                 postgres_insert_query = """ INSERT INTO feed (id, media, title, url, date) VALUES (%s,%s,%s,%s,%s)"""
                 record_to_insert = (item_id, media_title, post_title, post_url, post_date)
@@ -58,6 +61,21 @@ while True:
 
                 loop_count += 1
                 item_id += 1
+        # XML クロール終了
+        fb_crawl()
+        alexa_crowl()
+        amazon_store_crowl()
+        aws_crowl()
+        microsoft_crowl()
+        wix_crowl()
+        yelp_crowl()
+        ebay_crowl()
+        mit_crowl()
+        wantedly_crowl()
+        yahoo_crowl()
+        ntt_crowl()
+
+
 
         xml_loop_counter += 1
 
@@ -79,7 +97,7 @@ while True:
                     regex = re.compile(r'://.+?.com')
                     get_text = regex.findall(x)
                 elif '.ad' in x:
-                    regex = re.compile(r'://.+? .ad')
+                    regex = re.compile(r'://.+?.ad')
                     get_text = regex.findall(x)
                 elif '.co' in x:
                     regex = re.compile(r'://.+?.co')
@@ -92,7 +110,10 @@ while True:
                 print(media_title)
                 post_title = feed_url['entries'][loop_count]['title']
                 post_url = feed_url['entries'][loop_count]['link']
-                post_date = feed_url['entries'][loop_count]['published']
+                if 'published' in feed_url['entries'][loop_count].keys():
+                    post_date = feed_url['entries'][loop_count]['published']
+                elif 'updated' in feed_url['entries'][loop_count].keys():
+                    post_date = feed_url['entries'][loop_count]['updated']
                 sql_update_query = """Update feed set title=%s, url=%s, date=%s where id=%s"""
                 cur.execute(sql_update_query, (post_title, post_url, post_date, str(item_id)))
                 con.commit()
