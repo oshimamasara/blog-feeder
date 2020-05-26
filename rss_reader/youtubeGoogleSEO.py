@@ -8,7 +8,7 @@ class youtubeGoogleSEOObj:
     #def __init__(self, item_counter):
     def __init__(self, loop_counter):
         #print(item_counter)
-        api_key = "AIzaSyD4vrD8gdiQJBj0Blq18uhoMEuf53WIU-g"
+        api_key = "AIzaSyBWCirxdCyU9gJM6FmYAHUcOzkghymZ4D0"  # Google Console: sugukesu
         my_youtube = build("youtube","v3",developerKey=api_key)
         request = my_youtube.search().list(
             part="snippet",

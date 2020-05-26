@@ -5,4 +5,5 @@ urlpatterns = [
     path('myfeed/', views.myfeed, name='myfeed'),
     path('myfeed2/', views.myfeed2, name='myfeed2'),
     path('myfeed3/', views.myfeed3, name='myfeed3'),
+    path('myfeed4/', views.myfeed4, name='myfeed4'),
 ]

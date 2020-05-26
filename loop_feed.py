@@ -99,6 +99,7 @@ while True:
                     post_date = feed_url['entries'][loop_count]['published']
                 elif 'updated' in feed_url['entries'][loop_count].keys():
                     post_date = feed_url['entries'][loop_count]['updated']
+
                 sql_update_query = """Update feed set title=%s, url=%s, date=%s where id=%s"""
                 cur.execute(sql_update_query, (post_title, post_url, post_date, str(item_id)))
                 con.commit()

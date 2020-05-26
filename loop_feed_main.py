@@ -1,6 +1,6 @@
 # class tips https://www.youtube.com/watch?v=0v9ATbJTQDc
 import time
-from rss_reader.xml import *
+from rss_reader.xml2 import *
 from rss_reader.yahoo import *
 from rss_reader.wantedly import *
 from rss_reader.fb import *
@@ -23,7 +23,7 @@ while True:
     wix1 = WixObj(loop_counter)
     youtubeGoogleSEO = youtubeGoogleSEOObj(loop_counter)
 
-    xml1 = XmlObj(loop_counter)
+    xml1 = Xml2Obj(loop_counter)
 
     print('Loop Finish!  回数：' + str(loop_counter))
     loop_counter += 1

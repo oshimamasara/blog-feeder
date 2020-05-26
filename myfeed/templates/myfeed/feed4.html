@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>myfeed</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129293328-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-129293328-1');
+</script>
+<style>
+    body{
+        margin: 0 auto;
+        max-width:900px;
+				padding: 2rem;
+				background-color: black;
+				color: lightgray;
+    }
+		h1{
+			color: gold;
+		}
+		a{
+			text-decoration: none;
+			color:lightgray;
+			font-weight: bold;
+			font-size: 1.5rem
+		}
+		hr{
+			margin: 1rem 0;
+		}
+		img{
+			width:100%;
+		}
+		/* Style tab links */
+		.tablink {
+		  background-color: #555;
+		  float: left;
+		  border: none;
+		  outline: none;
+		  cursor: pointer;
+		  padding: 14px 16px;
+		  width: 50%;
+			font-size: 1.5rem;
+			color:lightgray;
+			margin-bottom: 1.5rem;
+		}
+		.tablink:hover {
+		  background-color: #777;
+		}
+		/* Style the tab content (and add height:100% for full page content) */
+		.tabcontent {
+		  display: none;
+		  height: 100%;
+		}
+		#myBtn {
+		  display: none;
+		  position: fixed;
+		  bottom: 20px;
+		  right: 30px;
+		  z-index: 99;
+		  font-size: 18px;
+		  border: none;
+		  outline: none;
+		  background-color: red;
+		  color: white;
+		  cursor: pointer;
+		  padding: 15px;
+		  border-radius: 4px;
+		}
+		#myBtn:hover {
+		  background-color: #555;
+		}
+    @media only screen and (max-width: 420px) {
+        h1{
+            margin: 0rem;
+            font-size: 1rem;
+        }
+				a{
+					font-size: 1.2rem;
+				}
+    }
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<button class="tablink" onclick="openPage('Blog', this, 'darkgreen')" id="defaultOpen">Blog</button>
+<button class="tablink" onclick="openPage('YouTube', this, 'darkcyan')" >YouTube</button>
+
+<div id="Blog" class="tabcontent">
+	<h1>Google</h1>
+	{% for data in Google %}
+	<a href="{{data.1}}">{{data.0}}</a>
+	<br>
+	<small>{{data.2}}</small>
+	<hr>
+	{% endfor %}
+	<br>
+	<h1>Wix</h1>
+	{% for data in Wix %}
+	<a href="{{data.1}}">{{data.0}}</a>
+	<br>
+	<small>{{data.2}}</small>
+	<hr>
+	{% endfor %}
+	<br>
+	<h1>Microsoft</h1>
+	{% for data in Microsoft %}
+	<a href="{{data.1}}">{{data.0}}</a>
+	<br>
+	<small>{{data.2}}</small>
+	<hr>
+	{% endfor %}
+	<br>
+	<h1>Facebook</h1>
+	{% for data in Facebook %}
+	<a href="{{data.1}}">{{data.0}}</a>
+	<br>
+	<small>{{data.2}}</small>
+	<hr>
+	{% endfor %}
+	<br>
+	<h1>Dena</h1>
+	{% for data in Dena %}
+	<a href="{{data.1}}">{{data.0}}</a>
+	<br>
+	<small>{{data.2}}</small>
+	<hr>
+	{% endfor %}
+	<br>
+	<h1>メルカリ</h1>
+	{% for data in Merukari %}
+	<a href="{{data.1}}">{{data.0}}</a>
+	<br>
+	<small>{{data.2}}</small>
+	<hr>
+	{% endfor %}
+	<br>
+	<h1>サクラ</h1>
+	{% for data in Sakura %}
+	<a href="{{data.1}}">{{data.0}}</a>
+	<br>
+	<small>{{data.2}}</small>
+	<hr>
+	{% endfor %}
+	<br>
+	<h1>Wantedly</h1>
+	{% for data in Wantedly %}
+	<a href="{{data.1}}">{{data.0}}</a>
+	<br>
+	<small>{{data.2}}</small>
+	<hr>
+	{% endfor %}
+	<br>
+	<h1>Yahoo!</h1>
+	{% for data in yahoo %}
+	<a href="{{data.1}}">{{data.0}}</a>
+	<br>
+	<small>{{data.2}}</small>
+	<hr>
+	{% endfor %}
+	<br>
+	<h1>Smartcamp</h1>
+	{% for data in Smatrcamp %}
+	<a href="{{data.1}}">{{data.0}}</a>
+	<br>
+	<small>{{data.2}}</small>
+	<hr>
+	{% endfor %}
+	<br>
+	<h1>Spotify</h1>
+	{% for data in Spotify %}
+	<a href="{{data.1}}">{{data.0}}</a>
+	<br>
+	<small>{{data.2}}</small>
+	<hr>
+	{% endfor %}
+	<br>
+	<h1>DropBox</h1>
+	{% for data in DropBox %}
+	<a href="{{data.1}}">{{data.0}}</a>
+	<br>
+	<small>{{data.2}}</small>
+	<hr>
+	{% endfor %}
+	<br>
+	<h1>Uber</h1>
+	{% for data in Uber %}
+	<a href="{{data.1}}">{{data.0}}</a>
+	<br>
+	<small>{{data.2}}</small>
+	<hr>
+	{% endfor %}
+	<br>
+	<h1>indeed</h1>
+	{% for data in indeed %}
+	<a href="{{data.1}}">{{data.0}}</a>
+	<br>
+	<small>{{data.2}}</small>
+	<hr>
+	{% endfor %}
+	<br>
+	<h1>Asana</h1>
+	{% for data in Asana %}
+	<a href="{{data.1}}">{{data.0}}</a>
+	<br>
+	<small>{{data.2}}</small>
+	<hr>
+	{% endfor %}
+	<br>
+	<h1>Insta</h1>
+	{% for data in Insta %}
+	<a href="{{data.1}}">{{data.0}}</a>
+	<br>
+	<small>{{data.2}}</small>
+	<hr>
+	{% endfor %}
+	<br>
+	<h1>SalesForce</h1>
+	{% for data in SalesForce %}
+	<a href="{{data.1}}">{{data.0}}</a>
+	<br>
+	<small>{{data.2}}</small>
+	<hr>
+	{% endfor %}
+	<br>
+</div>
+
+<div id="YouTube" class="tabcontent">
+	<h1>Goolge Web Master</h1>
+	{% for data in  YouTubeGoogleSEO %}
+	<a href="{{data.1}}">{{data.0}} <img src="{{data.3}}"></a>
+	<im>
+	<br>
+	<small>{{data.2}}</small>
+	<hr>
+	{% endfor %}
+	<br>
+</div>
+
+<script>
+// tab
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+document.getElementById("defaultOpen").click();
+
+
+// go top
+var mybutton = document.getElementById("myBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>
