@@ -16,12 +16,13 @@ loop_counter = 0
 #yahoo1 = YahooObj(item_counter)
 
 while True:
-    ######yahoo1 = YahooObj()
-    ######wantedly1 = WantedlyObj()
-    ######fb1 = FacebookObj()
-    ######microsoft1 = MicrosoftObj()
-    ######wix1 = WixObj()
-    ######youtubeGoogleSEO = youtubeGoogleSEOObj()
+    yahoo1 = YahooObj(loop_counter)
+    wantedly1 = WantedlyObj(loop_counter)
+    fb1 = FacebookObj(loop_counter)
+    microsoft1 = MicrosoftObj(loop_counter)
+    wix1 = WixObj(loop_counter)
+    youtubeGoogleSEO = youtubeGoogleSEOObj(loop_counter)
+
     xml1 = XmlObj(loop_counter)
 
     print('Loop Finish!  回数：' + str(loop_counter))

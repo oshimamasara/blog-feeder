@@ -62,21 +62,6 @@ while True:
                 loop_count += 1
                 item_id += 1
         # XML クロール終了
-        fb_crawl()
-        alexa_crowl()
-        amazon_store_crowl()
-        aws_crowl()
-        microsoft_crowl()
-        wix_crowl()
-        yelp_crowl()
-        ebay_crowl()
-        mit_crowl()
-        wantedly_crowl()
-        yahoo_crowl()
-        ntt_crowl()
-
-
-
         xml_loop_counter += 1
 
         cur.execute("select id,media,title,url,date from feed")
