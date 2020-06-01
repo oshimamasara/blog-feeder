@@ -1,7 +1,5 @@
 
-<div style="max-width: 10vw;">
-<img src="img.jpg">
-</div>
+<img src="img.jpg" width="10vw">
 
 ```
 python 3.6.7
