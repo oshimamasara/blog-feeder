@@ -1,4 +1,4 @@
-<img src="img.jpg" width="100%">
+<img src="img.jpg" style="width:auto;height:50vh">
 
 ```
 python 3.6.7
