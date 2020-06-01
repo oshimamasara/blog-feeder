@@ -1,4 +1,11 @@
-<img src="img.jpg" style="width:auto;height:50vh">
+<style>
+  img{
+    max-width: auto;
+    max-height: 50vh;
+  }
+</style>
+<img src="img.jpg">
+</div>
 
 ```
 python 3.6.7
