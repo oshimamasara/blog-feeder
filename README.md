@@ -1,5 +1,5 @@
 
-<img src="img.jpg" width="10vw">
+<img src="img.jpg" width="200px">
 
 ```
 python 3.6.7
