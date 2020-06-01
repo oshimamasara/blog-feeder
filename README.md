@@ -1,9 +1,5 @@
-<style>
-  img{
-    max-width: auto;
-    max-height: 50vh;
-  }
-</style>
+
+<div style="max-width: auto; max-height: 50vh;">
 <img src="img.jpg">
 </div>
 
