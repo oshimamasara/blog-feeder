@@ -1,5 +1,5 @@
 
-<div style="max-width: auto; max-height: 50vh;">
+<div style="max-width: 10vw;">
 <img src="img.jpg">
 </div>
 
